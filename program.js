@@ -1,6 +1,12 @@
+var OSinfo = require('./OSinfo');
+
+
 process.stdin.setEncoding('utf-8');
 
+
+
 console.log(process.env.username);
+//wyświetlony użytkownik, ponieważ w systemie windows nie wyświetlimy języka sytemu :)
 
 process.stdin.on('readable', function() {
     var input = process.stdin.read();
@@ -16,11 +22,15 @@ process.stdin.on('readable', function() {
                 process.stdout.write('Quitting app!\n');
                 process.exit();
                 break;
+            case '/getOSinfo':  
+                OSinfo.print();
+                break;
             default: 
                 process.stderr.write('Wrong instruction!\n');
                 break;
         }
-        process.stdout.write(input);
+        //process.stdout.write(input);
     }
    
 });
+
