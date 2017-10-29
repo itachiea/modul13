@@ -1,6 +1,7 @@
 process.stdin.setEncoding('utf-8');
 
-console.log(process.env.username);
+console.log(process.env.username); //W windowsie nie ma opcji wyświetlenia języka systemu - więc wyświetlam nazwę użytkownika :)
+console.log(process.version);
 
 process.stdin.on('readable', function() {
     var input = process.stdin.read();
