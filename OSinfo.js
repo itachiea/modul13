@@ -1,7 +1,6 @@
 var os = require('os');
 var timeModule = require('./TimeModule');
 
-time = os.uptime;
 function getOSinfo() {
     var type = os.type(),
     release = os.release(),
@@ -22,10 +21,9 @@ function getOSinfo() {
     console.log('System: ', type);
     console.log('Wersja: ', release);
     console.log('Procesor', cpu);
-    console.log(timeModule.CalcTime());
+    console.log(timeModule.CalcTime(os.uptime()));
     console.log('Nazwa użytkownika: ', user.username);
     console.log('Katalog domowy: ', user.homedir);
 }
 
 exports.print = getOSinfo;
-exports.time = time;
