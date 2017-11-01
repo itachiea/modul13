@@ -1,0 +1,24 @@
+{
+  "name": "modul13",
+  "version": "1.0.0",
+  "description": "",
+  "main": "OSinfo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itachiea/modul13.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itachiea/modul13/issues"
+  },
+  "homepage": "https://github.com/itachiea/modul13#readme",
+  "dependencies": {
+    "colors": "^1.1.2"
+  }
+}
