@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/itachiea/modul13#readme",
   "dependencies": {
-    "colors": "^1.1.2"
+    "colors": "^1.1.2",
+    "stat-mode": "^0.2.2"
   }
 }
