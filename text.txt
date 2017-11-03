@@ -1,2 +1,0 @@
-.git,.gitattributes,index.js,node_modules,OSinfo.js,package-lock.json,package.json,text.txt,thresh.jpg,TimeModule.js
-jajko
