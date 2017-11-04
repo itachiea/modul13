@@ -14,7 +14,7 @@ fs.readFile('./404.jpg', function(err, data) {
 })
 
 server.on('request', function(request, response) {
-	if (request.method === 'GET' && request.url === '/s'){
+	if (request.method === 'GET' && request.url === '/'){
 		response.setHeader("Content-Type", "text/html; charset=utf-8");
 		response.end(indexHTML);
 	} else {
@@ -22,23 +22,6 @@ server.on('request', function(request, response) {
 		response.end(image);
 	}
 });
-
-/*fs.readFile('./index.html', 'utf-8', function(err, http) {
-	if(err) throw err;
-		server.on('request', function(request, response) {
-		response.setHeader("Content-Type", "text/html; charset=utf-8");
-			if (request.method === 'GET' && request.url === '/s') {
-				response.write(http);
-				response.end();
-			} else {
-				fs.readFile('./404.html', 'utf-8', function(err, http) {
-					response.statusCode = 404;
-					response.write(http);
-					response.end();
-				});
-		}
-	});
-});*/
 
 
 server.listen(8080);
