@@ -1,5 +1,4 @@
 var os = require('os');
-var colors = require('colors')
 var timeModule = require('./TimeModule');
 
 function getOSinfo() {
@@ -19,12 +18,12 @@ function getOSinfo() {
             type = 'Brak informacji o systemie >.<';
     }
 
-    console.log('System: '.cyan, type);
-    console.log('Wersja: '.green, release);
-    console.log('Procesor'.magenta, cpu);
-    console.log('Czas włączenia: '.yellow,timeModule.CalcTime(os.uptime()));
-    console.log('Nazwa użytkownika: '.white, user.username);
-    console.log('Katalog domowy: '.grey, user.homedir);
+    console.log('System: ', type);
+    console.log('Wersja: ', release);
+    console.log('Procesor', cpu);
+    console.log(timeModule.CalcTime(os.uptime()));
+    console.log('Nazwa użytkownika: ', user.username);
+    console.log('Katalog domowy: ', user.homedir);
 }
 
 exports.print = getOSinfo;
